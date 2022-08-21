@@ -1,0 +1,129 @@
+$main-color: #2a4cb2;
+$sub-color: #eeeeee;
+$main-font-size: 16px;
+
+@use '../css/reset.scss';
+
+.background {
+    background-color: $main-color;
+    font-size: $main-font-size - 2px;
+}
+.main-bg {
+    h4 {
+        font-size: 16px;
+    }
+}
+
+%btn {
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+}
+.btn-green {
+    @extend %btn;
+    color: green;
+}
+.btn-red {
+    @extend %btn;
+    color: red
+}
+
+%bg {
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+}
+.bg-red {
+    @extend %bg;
+    background-color: red;
+}
+.bg-blue {
+    @extend %bg;
+    background-color: blue;
+}
+.bg-greed {
+    @extend %bg;
+    background-color: green
+}
+
+.list-sheet {
+    li {
+        list-style: none;
+        border: 1px solid #eee;
+        padding: 7px;
+        width: 350px;
+    }
+    .active {
+        background-color: $main-color;
+        color: white;
+    }
+    
+    li:hover {
+        background-color: skyblue;
+        color: white;
+    }
+}
+
+@mixin alert-style($color) {
+    background-color: $color;
+    padding: 10px;
+    font-size: 16px;
+    width: 600px;
+    margin-bottom: 10px;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.alert-gr {
+    @include alert-style(green);
+}
+.alert-yl {
+    @include alert-style(orange);
+}
+.alert-bl {
+    @include alert-style($main-color);
+}
+
+@mixin col-style($wd) {
+    width: $wd;
+    margin-right: 13px;
+    margin-left: 13px;
+    padding: 12px;
+}
+.row {
+    background-color: #2a4cb2;
+    color: white;
+    display: flex;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    .col-6 {
+        @include col-style(50%)
+    }
+    .col-4 {
+        @include col-style(33.33%)
+    }
+    .col-3 {
+        @include col-style(25%)
+    }
+    .col-2 {
+        @include col-style(16.6%)
+    }
+}
+
+@mixin font-style($구멍) {
+    font-size: $구멍;
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-size: 30px;
+    letter-spacing: -1px;
+}
+h2 {
+    @include font-style(20px);
+}
+h2 {
+    @include font-style(10px);
+}
