@@ -1,6 +1,6 @@
 
 $main-color:#484bb3;
-$sub-color: #eeeeee;
+$sub-color: #f7f7f7;
 
 div {
     box-sizing: border-box;
@@ -9,17 +9,21 @@ body {
     margin: 0px;
     background-color: $sub-color !important;
 }
+p {
+    font-size: 20px;
+}
 
 .navi-bar {
     background-color: white;
     width: 100%;
-    padding: 10px 20px 10px 60px;
+    padding: 10px 20px 10px 67px;
     display: flex;
+    box-shadow: 0px 0px 5px 0px rgb(186, 186, 186);
 }
 .search-bar {
     float: left;
 
-    input{
+    .input-text{
         float: left;
         border: 1.5px solid lightgrey;
         border-radius: 5px;
@@ -27,6 +31,10 @@ body {
         border-bottom-right-radius: 0;
         width: 200px;
         padding: 5px 5px 5px 10px;
+        transition: all 1s;
+    }
+    .input-text:focus {
+        width: 400px;
     }
     button {
         float: left;
@@ -54,23 +62,48 @@ body {
         float: right;
     }
 }
-
-
+.side-bar {
+    position: fixed;
+    z-index: 5;
+    width: 40px;
+    height: 100%;
+    background-color: $main-color;
+    color: white;
+}
 .dashboard-container {
-    padding: 30px 10px 10px 60px;
+    padding: 10px 20px 10px 67px;
 }
 @mixin box($color) {
-    width: 270px;
-    height: 130px;
-    border: none;
-    border-left: 7px solid $color;
+    width: 96%;
+    height: 160px;
+    // border: 1px solid rgb(193, 193, 193);
+    border-left: 5px solid $color;
     border-radius: 7px;
     background-color: white;
-}
-.box-fluid {
+    box-shadow: 0px 3px 3px 0px lightgrey;
+    padding: 30px 25px 20px 25px;
     display: flex;
-    .dash-box-lb {
-        @include box(lightblue);
-
+    justify-content:space-between;
+    
+    i {
+        font-size: 40px;
+        color: grey;
+        margin-top: 30px
     }
+}
+.dash-box-lb {
+    @include box(lightblue);
+}
+.dash-box-gr {
+    @include box(chartreuse);
+}
+.dash-box-bl{
+    @include box(#484bb3);
+}
+.dash-box-yl {
+    @include box(gold);
+}
+
+@media screen and(max-width : 768px) {
+
 }

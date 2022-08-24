@@ -4,20 +4,25 @@ div {
 
 body {
   margin: 0px;
-  background-color: #eeeeee !important;
+  background-color: #f7f7f7 !important;
+}
+
+p {
+  font-size: 20px;
 }
 
 .navi-bar {
   background-color: white;
   width: 100%;
-  padding: 10px 20px 10px 60px;
+  padding: 10px 20px 10px 67px;
   display: flex;
+  box-shadow: 0px 0px 5px 0px rgb(186, 186, 186);
 }
 
 .search-bar {
   float: left;
 }
-.search-bar input {
+.search-bar .input-text {
   float: left;
   border: 1.5px solid lightgrey;
   border-radius: 5px;
@@ -25,6 +30,10 @@ body {
   border-bottom-right-radius: 0;
   width: 200px;
   padding: 5px 5px 5px 10px;
+  transition: all 1s;
+}
+.search-bar .input-text:focus {
+  width: 400px;
 }
 .search-bar button {
   float: left;
@@ -53,18 +62,83 @@ body {
   float: right;
 }
 
-.dashboard-container {
-  padding: 30px 10px 10px 60px;
+.side-bar {
+  position: fixed;
+  z-index: 5;
+  width: 40px;
+  height: 100%;
+  background-color: #484bb3;
+  color: white;
 }
 
-.box-fluid {
-  display: flex;
+.dashboard-container {
+  padding: 10px 20px 10px 67px;
 }
-.box-fluid .dash-box-lb {
-  width: 270px;
-  height: 130px;
-  border: none;
-  border-left: 7px solid lightblue;
+
+.dash-box-lb {
+  width: 96%;
+  height: 160px;
+  border-left: 5px solid lightblue;
   border-radius: 7px;
   background-color: white;
+  box-shadow: 0px 3px 3px 0px lightgrey;
+  padding: 30px 25px 20px 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.dash-box-lb i {
+  font-size: 40px;
+  color: grey;
+  margin-top: 30px;
+}
+
+.dash-box-gr {
+  width: 96%;
+  height: 160px;
+  border-left: 5px solid chartreuse;
+  border-radius: 7px;
+  background-color: white;
+  box-shadow: 0px 3px 3px 0px lightgrey;
+  padding: 30px 25px 20px 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.dash-box-gr i {
+  font-size: 40px;
+  color: grey;
+  margin-top: 30px;
+}
+
+.dash-box-bl {
+  width: 96%;
+  height: 160px;
+  border-left: 5px solid #484bb3;
+  border-radius: 7px;
+  background-color: white;
+  box-shadow: 0px 3px 3px 0px lightgrey;
+  padding: 30px 25px 20px 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.dash-box-bl i {
+  font-size: 40px;
+  color: grey;
+  margin-top: 30px;
+}
+
+.dash-box-yl {
+  width: 96%;
+  height: 160px;
+  border-left: 5px solid gold;
+  border-radius: 7px;
+  background-color: white;
+  box-shadow: 0px 3px 3px 0px lightgrey;
+  padding: 30px 25px 20px 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.dash-box-yl i {
+  font-size: 40px;
+  color: grey;
+  margin-top: 30px;
 }/*# sourceMappingURL=portfolio3.css.map */
