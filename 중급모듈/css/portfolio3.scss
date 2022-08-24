@@ -1,0 +1,76 @@
+
+$main-color:#484bb3;
+$sub-color: #eeeeee;
+
+div {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    background-color: $sub-color !important;
+}
+
+.navi-bar {
+    background-color: white;
+    width: 100%;
+    padding: 10px 20px 10px 60px;
+    display: flex;
+}
+.search-bar {
+    float: left;
+
+    input{
+        float: left;
+        border: 1.5px solid lightgrey;
+        border-radius: 5px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        width: 200px;
+        padding: 5px 5px 5px 10px;
+    }
+    button {
+        float: left;
+        border: none;
+        border-radius: 5px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        width: 40px;
+        height: 37px;
+        background-color: #242424;
+        color: white;
+        font-size: 15px;
+        padding: 5px;
+    }
+}
+.user-bar {
+    display: flex;
+    .nav-item {
+        list-style: none;
+        float: right;
+    }
+    .nav-link {
+        text-decoration: none;
+        color: grey;
+        float: right;
+    }
+}
+
+
+.dashboard-container {
+    padding: 30px 10px 10px 60px;
+}
+@mixin box($color) {
+    width: 270px;
+    height: 130px;
+    border: none;
+    border-left: 7px solid $color;
+    border-radius: 7px;
+    background-color: white;
+}
+.box-fluid {
+    display: flex;
+    .dash-box-lb {
+        @include box(lightblue);
+
+    }
+}
