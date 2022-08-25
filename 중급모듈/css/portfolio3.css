@@ -65,10 +65,29 @@ p {
 .side-bar {
   position: fixed;
   z-index: 5;
-  width: 40px;
-  height: 100%;
+  width: 150px;
+  height: 100vh;
   background-color: #484bb3;
   color: white;
+  transform: translateX(-100px);
+  transition: all 0.5s;
+  font-family: "nanumsquare";
+  padding-top: 20px;
+}
+.side-bar div {
+  margin: 20px 10px 0px 8px;
+}
+.side-bar i {
+  transform: translateX(105px);
+  transition: all 0.5s;
+  font-size: 20px;
+}
+.side-bar:hover {
+  transform: translateX(0px);
+}
+.side-bar:hover i {
+  transform: translateX(0px);
+  transition: all 0.5s;
 }
 
 .dashboard-container {
@@ -83,6 +102,7 @@ p {
   background-color: white;
   box-shadow: 0px 3px 3px 0px lightgrey;
   padding: 30px 25px 20px 25px;
+  margin-bottom: 15px;
   display: flex;
   justify-content: space-between;
 }
@@ -100,6 +120,7 @@ p {
   background-color: white;
   box-shadow: 0px 3px 3px 0px lightgrey;
   padding: 30px 25px 20px 25px;
+  margin-bottom: 15px;
   display: flex;
   justify-content: space-between;
 }
@@ -117,6 +138,7 @@ p {
   background-color: white;
   box-shadow: 0px 3px 3px 0px lightgrey;
   padding: 30px 25px 20px 25px;
+  margin-bottom: 15px;
   display: flex;
   justify-content: space-between;
 }
@@ -134,6 +156,7 @@ p {
   background-color: white;
   box-shadow: 0px 3px 3px 0px lightgrey;
   padding: 30px 25px 20px 25px;
+  margin-bottom: 15px;
   display: flex;
   justify-content: space-between;
 }
